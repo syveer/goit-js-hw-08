@@ -1,11 +1,11 @@
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
+import SimpleLightbox from 'SimpleLightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 import { galleryItems } from './gallery-items.js';
 
 const listEl = document.querySelector('.gallery');
 
-galleryItems.forEach((item) => {
+galleryItems.forEach(item => {
   const listItemEl = document.createElement('li');
   listItemEl.classList.add('gallery__item');
   listItemEl.innerHTML = `<a class='gallery__link' href='${item.original}'>
@@ -35,7 +35,7 @@ function openImageInLightbox(event) {
 
   lightbox.show();
 
-  document.addEventListener('keydown', (e) => {
+  document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
       lightbox.close();
     }
